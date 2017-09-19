@@ -31,6 +31,3 @@ def main():
     my_email = "attila.kezer@gmail.com"
     print(name_from_email(my_email))
 main()
-
-    
-
