@@ -9,7 +9,6 @@ dictionary = [
 
 def add_word(hun_word, eng_word):
     dictionary.append({hun_word: eng_word})
-    print (dictionary)
 
 # Implement these methods. They should return the translation of the given
 # word form the list 'dictionary'
@@ -37,6 +36,6 @@ def translate_to_eng(hun_word):
         i += 1
 
 
-# add_word("asztal", "desk")
-print(translate_to_hun("tree"))
-print(translate_to_eng("fa"))
+add_word("asztal", "desk")
+print(translate_to_hun("desk"))
+print(translate_to_eng("asztal"))
