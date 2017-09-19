@@ -10,22 +10,23 @@
 def name_from_email(email_address):
     first_name = ""
     full_name =""
-    i = 0
-    while email_address[i] != ".":
-        if i == 0:
-            first_name += email_address[i].upper()
+    after_dot = False
+    after_at = False
+    for i in range(len(email_address)):
+        if email_address[i] != "." and not after_dot:
+            if i == 0:
+                first_name += email_address[i].upper()
+            else:
+                first_name += email_address[i]
+        elif email_address[i] != "@" and not after_at:
+            after_dot = True
+            if email_address[i-1] == ".":
+                full_name += email_address[i].upper()
+            else:
+                full_name += email_address[i]
         else:
-            first_name += email_address[i]
-        i += 1
-    i += 1
-    while email_address[i] != "@":
-        if email_address[i-1] == ".":
-            full_name += email_address[i].upper()
-        else:
-            full_name += email_address[i]
-        i += 1
-    # first_name[0] = first_name[0].upper()
-    full_name += " " + first_name
+            after_at = True
+    full_name = full_name[1:] + " " + first_name
     return full_name
 def main():
     my_email = "attila.kezer@gmail.com"
