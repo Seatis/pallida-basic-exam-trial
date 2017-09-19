@@ -33,4 +33,5 @@ The application is accepted if:
 
 ###  What is the difference between id and class in CSS? [2p]
 #### Your answer:
-[add your answer here]
+Each html element can have only one ID, and I can use that ID just one time in the code.
+But the same class can be used on multiple html elements. and the html elemnts can have more classes.
